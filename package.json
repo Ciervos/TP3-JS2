@@ -1,0 +1,19 @@
+{
+  "name": "tp3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ciervos/TP3-JS2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ciervos/TP3-JS2/issues"
+  },
+  "homepage": "https://github.com/Ciervos/TP3-JS2#readme"
+}
