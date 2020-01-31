@@ -17,18 +17,31 @@ body{
     }
 }
 .wrapper-boton{
-    border: 1px solid;
+    border: 2px solid;
     background-color: $verde;
     border-color: $verdeborde;
-    padding: 9px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
     i{
         color: $blanco;
-        font-size: 17px;
+        font-size: 21px; 
+        padding: 2px 6px;      
     }
-  
+    
+    
+}
+.wrapper-boton:hover{
+    background-color: #449d44;
+    border-color: #398439;
+    cursor: pointer;
 }
 .text{
     color: $blanco;
     font-size: 13px;
+    padding: 0px 7px 0px 2px;
+    letter-spacing: 0.5px;
 }
 
