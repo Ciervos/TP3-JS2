@@ -1,0 +1,19 @@
+
+const addNewEmployee = () => {
+   let botonAdd= document.querySelector('.wrapper-boton');
+   botonAdd.addEventListener('click', () => {
+    let modal = document.querySelector('.modal-wrapper');
+    modal.setAttribute('style', 'display:block');
+   });
+}
+
+addNewEmployee();
+
+const cancelModal = () => {
+    let botonCancel = document.querySelectorAll('.boton-cancel');
+    botonCancel.addEventListener('click', () => {
+        let modal = document.querySelector('.modal-wrapper');
+        modal.setAttribute('style', 'display:none');
+    });
+}
+
