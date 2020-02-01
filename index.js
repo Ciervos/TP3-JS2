@@ -32,6 +32,6 @@ const createTodo = async (name, email, address, phone) => {
 }
 /*Funciones B */
 
-/*Funciones C */
+/*Funciones C eliminar*/
 
 /*Funciones D */

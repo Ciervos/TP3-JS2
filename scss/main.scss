@@ -60,4 +60,58 @@ padding: 20px 25px;
 width: 85%;
 
 }
-}
+
+  .tabla {
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  color: $azultxt;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  width: 100%;
+
+  .tabla-encabezado {
+    .tabla-encabezado-fila {
+      box-sizing: border-box;
+
+      &:first-child {
+        border-top: 0;
+        width: 60px;
+      }
+
+      .tabla-encabezado-celda {
+        border-bottom: 2px solid $gris;
+        border-color: $gris;
+        border-top: 0;
+        box-sizing: border-box;
+        padding: 12px 15px;
+        text-align: left;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .tabla-contenido {
+    box-sizing: border-box;
+
+    .tabla-contenido-fila {
+      &:nth-of-type(2n + 1) {
+        background-color: $gris;
+      }
+    }
+
+    .tabla-contenido-celda {
+      border-color: $gris;
+      border-top: 1px solid $gris;
+      padding: 12px 15px;
+      vertical-align: middle;
+    }
+  }
+
+  .checkbox {
+    box-sizing: border-box;
+    opacity: 0;
+    position: relative;
+  }
