@@ -36,6 +36,7 @@ const filtrar = () =>{
 let botonBuscar = document.querySelector("#boton-filtro");
 botonBuscar.addEventListener("click", filtrar);
 
+/* validar campos llenos */
 
 /*Funciones C */
 
