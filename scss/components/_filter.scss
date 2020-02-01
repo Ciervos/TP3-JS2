@@ -1,0 +1,32 @@
+/*Filtro*/
+.filtro-contenedor{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    width: 100%;
+
+.filtro-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 15px;
+    margin-left: 15px;  
+    height: 30px;  
+    width: 80%;
+
+  .filtro-boton{
+    background-color: $verde;
+    border-style: none;
+    color: $blanco;
+    font-family: $font;
+    
+    
+    }
+}
+
+.filtro-input{
+ margin-right: 10px;
+ font-family: $font; 
+ width: 20%;
+}
+}
