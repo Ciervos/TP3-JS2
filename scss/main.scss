@@ -1,4 +1,50 @@
 @import 'common/all';
+body{
+    font-family:$font;
+}
+.wrapper-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    background: $azul;
+    color: $blanco;
+    margin: 32px 55px 0px 107px;
+    width: 80%;
+    padding: 16px 27px;
+    .title{
+        font-size: 24px;
+    }
+}
+.wrapper-boton{
+    border: 2px solid;
+    background-color: $verde;
+    border-color: $verdeborde;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    i{
+        color: $blanco;
+        font-size: 21px; 
+        padding: 2px 6px;      
+    }
+}
+.wrapper-boton:hover{
+    background-color: #449d44;
+    border-color: #398439;
+    cursor: pointer;
+}
+.text{
+    color: $blanco;
+    font-size: 13px;
+    padding: 0px 7px 0px 2px;
+    letter-spacing: 0.5px;
+}
+.modal-wrapper{
+    display: none;
+}
 
 
 body{
