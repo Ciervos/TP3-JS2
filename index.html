@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" type="text/css" href="css/main.css">
-   <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+          <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-   
-    <title>Trabajo Práctico 3 - ADA </title>
-</head>
-<body>
-  <header class="wrapper-menu">
-        <h1 class="title">Manage Employees</h1>
-        <div class="wrapper-boton">
-            <a href="wrapper-icono">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </a>
-            <span class="text">Add New Employee</span>
-        </div>
-    </header>
-    <div class="modal-wrapper">
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Trabajo Práctico 3 - ADA</title>
+  </head>
+  <body>
+       <div class="modal-wrapper">
         <div class="modal-content-form">
             <form action="">
                 <div class="modal-header">
@@ -63,9 +60,39 @@
       <input class="filtro-boton" type="submit" value="Submit">
       </form>  
     </section>
-     <!-- Lista --> 
-</div> 
-
-</body>
+     <!-- Lista -->
+       <table class="tabla">
+      <thead class="tabla-encabezado">
+        <tr class="tabla-encabezado-fila">
+          <th class="tabla-encabezado-celda">
+            <input id="seleccionarTodos" class="checkbox" type="checkbox" />
+          </th>
+          <th class="tabla-encabezado-celda">Name</th>
+          <th class="tabla-encabezado-celda">Email</th>
+          <th class="tabla-encabezado-celda">Address</th>
+          <th class="tabla-encabezado-celda">Phone</th>
+          <th class="tabla-encabezado-celda">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="tabla-contenido">
+        <tr class="tabla-contenido-fila">
+          <td class="tabla-contenido-celda"><input type="checkbox" /></td>
+          <td>Mary Davila</td>
+          <td>maryangeldavila@gmail.com</td>
+          <td>Olivos</td>
+          <td>91156228956</td>
+          <td>
+            <a href="">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
+            <a href="">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>    
 <script src="index-dom.js"></script>
+  </body>
 </html>

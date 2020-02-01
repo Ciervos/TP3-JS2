@@ -6,6 +6,6 @@
 
 /*Funciones B */
 
-/*Funciones C */
+/*Funciones C eliminar*/
 
 /*Funciones D */
