@@ -14,16 +14,22 @@ const handleError = err => {
     alert (`Hubo un error. ${err}`)
 }
 
-const getTodos = async () => {
+const createTodo = async (name, email, address, phone) => {
     try {
-        const res = await axios.get(baseUrl);
-        lista = res.data;
-        showTodo();
-
+        let data = {
+            name,
+            email,
+            address,
+            phone,   
+        }
+        const res = await axios.post(baseUrl, data);
+        console.log(res)
+        lista.push(res.data);
+        
     } catch (err) {
         handleError(err);
     }
- }
+}
 /*Funciones B */
 
 /*Funciones C */
