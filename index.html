@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
     <title>Trabajo Práctico 3 - ADA</title>
   </head>
+
 <body>
   <!--Header-->
   <header class="wrapper-menu">
@@ -23,15 +24,15 @@
             </a>
             <span class="text">Add New Employee</span>
         </div>
-  </header>
-
+</header>
 <div class="contenedor-principal">
     <!-- Filter-->  
  <section class="filtro-contenedor"><form class="filtro-form" action="#">    
-      <input class="filtro-input" type="text"></input>
-      <input class="filtro-boton" type="submit" value="Submit">
+      <input id="input-filtro" class="filtro-input" placeholder="  Filter.." type="text"></input>
+      <input id="boton-filtro" class="filtro-boton" type="submit" value="Submit">
       </form>  
     </section>
+
      <!-- Lista -->
 
   <table class="tabla">
@@ -89,3 +90,4 @@
 <script src="index.js"></script>
 </body>
 </html>
+

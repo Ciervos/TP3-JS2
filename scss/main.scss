@@ -1,4 +1,5 @@
 @import 'common/all';
+
 body{
     font-family:$font;
     background-color: $gris;
@@ -114,6 +115,7 @@ body{
     opacity: 0;
     position: relative;
   }
+
 .content-icons{
     padding-left: 13px;
     i{
@@ -127,4 +129,3 @@ body{
 }
 .tacho{
     color:red;
-}
