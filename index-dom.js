@@ -89,7 +89,6 @@ const addNewEmployee = () => {
      botonCancel.forEach(boton => {
          boton.addEventListener('click', () => {
              let modal = document.querySelector('.modal-wrapper');
-             console.log(boton);
              modal.setAttribute('style', 'display:none');
          });
      })

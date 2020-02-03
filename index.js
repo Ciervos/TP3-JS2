@@ -24,6 +24,7 @@ const createTodo = async (fullname, email, address, phone) => {
         }
         const res = await axios.post(baseUrl, data);
         lista.push(res.data);
+        console.log(data)
         
     } catch (err) {
     handleError(err);
