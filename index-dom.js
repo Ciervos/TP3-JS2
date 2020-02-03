@@ -12,7 +12,6 @@ addNewEmployee();
 
 const cancelModal = () => {
 
-    console.log('98172938172');
     let botonCancel = document.querySelectorAll('.boton-cancel');
     botonCancel.forEach(boton => {
         boton.addEventListener('click', () => {
