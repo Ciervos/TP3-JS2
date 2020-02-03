@@ -23,22 +23,6 @@ const getLista = async () => {
         .catch(handleError);
 };
 
-const createTodo = async (fullname, email, address, phone) => {
-   
-    try {
-        let data = {
-            fullname,
-            email,
-            address,
-            phone
-        }
-        const res = await axios.post(baseUrl, data);
-        lista.push(res.data);
-        
-    } catch (err) {
-    handleError(err);
-    }
- }
 
 getLista();
 
