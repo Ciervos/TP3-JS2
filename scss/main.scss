@@ -1,5 +1,9 @@
 @import 'common/all';
 
+body{
+    font-family:$font;
+    background-color: $gris;
+}
 .wrapper-menu{
     display: flex;
     align-items: center;
@@ -45,33 +49,28 @@
 }
 
 
-body{
-background-color: $gris;
-font-family:$font;
-
-
 .contenedor-principal{
-background-color: $blanco;
-border-radius: 3px;
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-margin: 30px 45px;
-padding: 20px 25px;
-width: 85%;
-
+    background-color: $blanco;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    padding: 20px 27px;
+    width: 80%;
+    margin-left: 107px;
 }
 
-  .tabla {
-  background-color: transparent;
-  border-collapse: collapse;
-  border-spacing: 0;
-  box-sizing: border-box;
-  color: $azultxt;
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  width: 100%;
+.tabla {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-sizing: border-box;
+    color: $azultxt;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    width: 100%;
+}
 
-  .tabla-encabezado {
+.tabla-encabezado {
     .tabla-encabezado-fila {
       box-sizing: border-box;
 
@@ -90,29 +89,43 @@ width: 85%;
         vertical-align: middle;
       }
     }
-  }
+}
+  
 
-  .tabla-contenido {
+.tabla-contenido {
     box-sizing: border-box;
 
     .tabla-contenido-fila {
-      &:nth-of-type(2n + 1) {
+        &:nth-of-type(2n + 1) {
         background-color: $gris;
-      }
+        }
     }
 
     .tabla-contenido-celda {
-      border-color: $gris;
-      border-top: 1px solid $gris;
-      padding: 12px 15px;
-      vertical-align: middle;
+        border-color: $gris;
+        border-top: 1px solid $gris;
+        padding: 12px 15px;
+        vertical-align: middle;
     }
-  }
+}
+
 
   .checkbox {
     box-sizing: border-box;
     opacity: 0;
     position: relative;
   }
-} 
+
+.content-icons{
+    padding-left: 13px;
+    i{
+        padding: 6px;
+        font-size: 16px;
+    }
 }
+
+.pencil{
+    color:yellow;
+}
+.tacho{
+    color:red;
