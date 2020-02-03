@@ -70,3 +70,9 @@ const deleteTodo = async (id, callback) => {
 
 
 getLista();
+
+/* Funciones D Modificar */
+
+const editTodo = () => {
+    
+}
