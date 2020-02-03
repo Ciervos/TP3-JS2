@@ -1,4 +1,4 @@
-
+/*Generar la tabla y lista en html */
 const showTodo = () => {
     const tbody = document.querySelector('.tabla-contenido');
     for(let todo of lista) {
@@ -59,6 +59,9 @@ const showTodo = () => {
     }
 }
 
+/*Fin de generar tabla */
+
+/*Boton de header y agregar un nuevo empleado */
 const addBoton = document.querySelector('#todo-create');
 
 addBoton.addEventListener("click", async () => {
@@ -82,7 +85,9 @@ const addNewEmployee = () => {
  }
  
  addNewEmployee();
- 
+
+ /* Fin de agregar empleado */
+  /* Desaparecer modal */
  const cancelModal = () => {
  
      let botonCancel = document.querySelectorAll('.boton-cancel');
@@ -96,7 +101,19 @@ const addNewEmployee = () => {
      
  }
  cancelModal();
- 
+  /* Fin de desaparecer modal */
+
+  /* Confirmacion de eliminacion modal */
+
+ /* Fin de eliminacion modal */
+
+
+/* Editar modal  */
+
+/* Fin de editar modal */
+
+
+ /* Filtro y busqueda */  
 const filtrar = () =>{
     let q = document.querySelector("#input-filtro").value; 
     getBuscar(q);
@@ -104,4 +121,4 @@ const filtrar = () =>{
 
 let botonBuscar = document.querySelector("#boton-filtro");
 botonBuscar.addEventListener("click", filtrar);
- 
+  /* Fin de filtro y busqueda */ 

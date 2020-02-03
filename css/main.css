@@ -2,6 +2,52 @@
 /*tipografia*/
 /*colores*/
 /*components*/
+.wrapper-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  background: #435d7d;
+  color: #ffffff;
+  margin: 32px 55px 0px 107px;
+  width: 80%;
+  padding: 16px 27px;
+}
+.wrapper-menu .title {
+  font-size: 24px;
+}
+
+.wrapper-boton {
+  border: 2px solid;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-boton i {
+  color: #ffffff;
+  font-size: 21px;
+  padding: 2px 6px;
+}
+.wrapper-boton:hover {
+  background-color: #449d44;
+  border-color: #398439;
+  cursor: pointer;
+}
+
+.text {
+  color: #ffffff;
+  font-size: 13px;
+  padding: 0px 7px 0px 2px;
+  letter-spacing: 0.5px;
+}
+
+.modal-wrapper {
+  display: none;
+}
+
 /*Filtro*/
 .filtro-contenedor {
   display: flex;
@@ -35,68 +81,6 @@
   margin-right: 10px;
   font-family: "Varela Round", sans-serif;
   width: 35%;
-}
-
-/*sections*/
-body {
-  font-family: "Varela Round", sans-serif;
-  background-color: #f5f5f5;
-}
-
-.wrapper-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 15px;
-  background: #435d7d;
-  color: #ffffff;
-  margin: 32px 55px 0px 107px;
-  width: 80%;
-  padding: 16px 27px;
-}
-.wrapper-menu .title {
-  font-size: 24px;
-}
-
-.wrapper-boton {
-  border: 2px solid;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper-boton i {
-  color: #ffffff;
-  font-size: 21px;
-  padding: 2px 6px;
-}
-
-.wrapper-boton:hover {
-  background-color: #449d44;
-  border-color: #398439;
-  cursor: pointer;
-}
-
-.text {
-  color: #ffffff;
-  font-size: 13px;
-  padding: 0px 7px 0px 2px;
-  letter-spacing: 0.5px;
-}
-
-.modal-wrapper {
-  display: none;
-}
-
-.contenedor-principal {
-  background-color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 20px 27px;
-  width: 80%;
-  margin-left: 107px;
 }
 
 .tabla {
@@ -156,11 +140,26 @@ body {
 }
 
 .pencil {
-  color: yellow;
+  color: #ffc107;
 }
 
 .tacho {
-  color: red;
+  color: #f44336;
+}
+
+/*sections*/
+body {
+  font-family: "Varela Round", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.contenedor-principal {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 20px 27px;
+  width: 80%;
+  margin-left: 107px;
 }
 
 /*# sourceMappingURL=main.css.map */
