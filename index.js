@@ -9,7 +9,7 @@ const handleError = err =>{
 
 /*Funciones A */
 
-let lista = [];
+
 let todo = {
     name,
     email,
@@ -17,9 +17,7 @@ let todo = {
     phone,
 };
 
-const handleError = err => {
-    alert (`Hubo un error. ${err}`)
-}
+
 
 const createTodo = async (name, email, address, phone) => {
     try {
