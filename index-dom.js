@@ -58,20 +58,8 @@ const showTodo = () => {
     tbody.appendChild(tr);
   }
 };
-showTodo();
-/*Fin de generar tabla */
 
-/*Boton eliminar empleado */
-const deleteTodo = () => {
-  let botonEliminarEmpleado = document.querySelectorAll(".tacho");
-  botonEliminarEmpleado.forEach(boton => {
-    boton.addEventListener("click", () => {
-      let modal = document.querySelector("#modal-eliminar");
-      modal.setAttribute("style", "display:block");
-    });
-  });
-};
-/*Boton fin eliminar empleado */
+/*Fin de generar tabla */
 
 /*Boton de header y agregar un nuevo empleado */
 const addBoton = document.querySelector("#todo-create");
@@ -113,7 +101,17 @@ cancelModal();
 /* Fin de desaparecer modal */
 
 /* Confirmacion de eliminacion modal */
+const eliminarEmpleado = () => {
+  let botonEliminarEmpleado = document.querySelectorAll(".tacho");
+  botonEliminarEmpleado.forEach(boton => {
+    boton.addEventListener("click", () => {
+      let modal = document.querySelector("#modal-eliminar");
+      modal.setAttribute("style", "display:block");
+    });
+  });
+};
 
+eliminarEmpleado();
 /* Fin de eliminacion modal */
 
 /* Editar modal  */
