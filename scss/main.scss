@@ -4,49 +4,7 @@ body{
     font-family:$font;
     background-color: $gris;
 }
-.wrapper-menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 15px;
-    background: $azul;
-    color: $blanco;
-    margin: 32px 55px 0px 107px;
-    width: 80%;
-    padding: 16px 27px;
-    .title{
-        font-size: 24px;
-    }
-}
-.wrapper-boton{
-    border: 2px solid;
-    background-color: $verde;
-    border-color: $verdeborde;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    i{
-        color: $blanco;
-        font-size: 21px; 
-        padding: 2px 6px;      
-    }
-}
-.wrapper-boton:hover{
-    background-color: #449d44;
-    border-color: #398439;
-    cursor: pointer;
-}
-.text{
-    color: $blanco;
-    font-size: 13px;
-    padding: 0px 7px 0px 2px;
-    letter-spacing: 0.5px;
-}
-.modal-wrapper{
-    display: none;
-}
+
 
 
 .contenedor-principal{
@@ -56,77 +14,4 @@ body{
     padding: 20px 27px;
     width: 80%;
     margin-left: 107px;
-}
-
-.tabla {
-    background-color: transparent;
-    border-collapse: collapse;
-    border-spacing: 0;
-    box-sizing: border-box;
-    color: $azultxt;
-    font-size: 13px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.tabla-encabezado {
-    .tabla-encabezado-fila {
-      box-sizing: border-box;
-
-      &:first-child {
-        border-top: 0;
-        width: 60px;
-      }
-
-      .tabla-encabezado-celda {
-        border-bottom: 2px solid $gris;
-        border-color: $gris;
-        border-top: 0;
-        box-sizing: border-box;
-        padding: 12px 15px;
-        text-align: left;
-        vertical-align: middle;
-      }
-    }
-}
-  
-
-.tabla-contenido {
-    box-sizing: border-box;
-
-    .tabla-contenido-fila {
-        &:nth-of-type(2n + 1) {
-        background-color: $gris;
-        }
-    }
-
-    .tabla-contenido-celda {
-        border-color: $gris;
-        border-top: 1px solid $gris;
-        padding: 12px 15px;
-        vertical-align: middle;
-    }
-}
-
-
-  .checkbox {
-    box-sizing: border-box;
-    opacity: 0;
-    position: relative;
-  }
-
-.content-icons{
-    padding-left: 13px;
-    i{
-        padding: 6px;
-        font-size: 16px;
-    }
-}
-
-.pencil{
-    color:yellow;
-}
-.tacho{
-    color:red;
 }
