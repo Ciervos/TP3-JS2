@@ -66,4 +66,8 @@
 }
 .tacho {
   color: $rojo;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

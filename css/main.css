@@ -188,6 +188,10 @@
   color: #f44336;
 }
 
+.tacho:hover {
+  cursor: pointer;
+}
+
 .modal-wrapper {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -215,9 +219,11 @@
 .modal-eliminar-header .modal-eliminar-header-title boton-cancel {
   background: 0 0;
   border: 0;
+  color: #566787;
   cursor: pointer;
   font-size: 21px;
   margin-top: -2px;
+  text-shadow: 0 1px 0 #ffffff;
   padding: 0;
 }
 
