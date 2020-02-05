@@ -37,6 +37,8 @@ const showTodo = () => {
         const i = document.createElement('i');
         i.className = 'fas fa-pencil-alt pencil';
         span.appendChild(i);
+
+        
         const tacho= document.createElement('i');
         tacho.className = 'fas fa-trash-alt tacho';
         span.appendChild(tacho);
@@ -60,7 +62,23 @@ const showTodo = () => {
 }
 
 /*Fin de generar tabla */
+i.addEventListener('click', () => {
 
+  console.table(todo);
+  const modal = document.querySelector('.modal-wrapper');
+  modal.setAttribute('style', 'display:block');
+
+  const fullname = document.querySelector('#name');
+  const email = document.querySelector('#email');
+  const address = document.querySelector('#address');
+  const phone = document.querySelector('#phone');
+  
+  fullname.value = todo.fullname;
+  email.value = todo.email;
+  address.value = todo.address;
+  phone.value = todo.phone;
+
+})
 /*Boton de header y agregar un nuevo empleado */
 const addBoton = document.querySelector('#todo-create');
 
