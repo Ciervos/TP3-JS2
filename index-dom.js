@@ -97,8 +97,13 @@ addBoton.addEventListener("click", async () => {
 
 
 const addNewEmployee = () => {
+  
     let botonAdd= document.querySelector('.wrapper-boton');
     botonAdd.addEventListener('click', () => {
+      document.querySelector('#name').value= "";
+      document.querySelector('#email').value = "";
+     document.querySelector('#address').value = "" ;
+      document.querySelector('#phone').value = "";
      let modal = document.querySelector('.modal-wrapper');
      modal.setAttribute('style', 'display:flex');
     
@@ -131,10 +136,10 @@ const addNewEmployee = () => {
 const addModify = document.querySelector('#todo-create');
 
 addModify.addEventListener("click", async() => {
-  const name = document.querySelector('#name-edit').value;
-  const email = document.querySelector('#email-edit').value;
-  const address = document.querySelector('#address-edit').value;
-  const phone = document.querySelector('#phone-edit').value;
+  const name = document.querySelector('#name').value;
+  const email = document.querySelector('#email').value;
+  const address = document.querySelector('#address').value;
+  const phone = document.querySelector('#phone').value;
 
   const tbody = document.querySelector('#body-list');
   tbody.textContent = '';
