@@ -100,7 +100,8 @@ const addNewEmployee = () => {
     let botonAdd= document.querySelector('.wrapper-boton');
     botonAdd.addEventListener('click', () => {
      let modal = document.querySelector('.modal-wrapper');
-     modal.setAttribute('style', 'display:block');
+     modal.setAttribute('style', 'display:flex');
+    
     });
  }
  
@@ -127,7 +128,7 @@ const addNewEmployee = () => {
 
 
 /* Editar modal  */
-const addModify = document.querySelector('#boton-save');
+const addModify = document.querySelector('#todo-create');
 
 addModify.addEventListener("click", async() => {
   const name = document.querySelector('#name-edit').value;
