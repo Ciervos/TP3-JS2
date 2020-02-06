@@ -1,33 +1,26 @@
-.modal-wrapper {
-  box-sizing: border-box;
+#modal-alerta {
+  color: $alerta;
+  font-size: 12px;
 }
 
-#modal-eliminar {
-  background-color: $blanco;
-  border: 1px solid $modal-borde;
-  border-radius: 3px;
-  box-shadow: 0 5px 15px $modal-sombra;
+#boton-eliminar {
+  background-color: $eliminar-bgk;
+  border: 1px solid transparent;
+  border-color: $eliminar-border;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: $azul;
-  display: none;
-  margin: 30px auto;
-  max-width: 400px;
-  position: relative;
-}
+  color: $blanco;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: -2px;
+  min-width: 100px;
+  text-align: center;
+  text-shadow: 0 1px 0 $blanco;
+  padding: 6px 12px;
+  vertical-align: middle;
 
-.modal-eliminar-header {
-  .modal-eliminar-header-title {
-    font-size: 18px;
-
-    boton-cancel {
-      background: 0 0;
-      border: 0;
-      color: $azultxt;
-      cursor: pointer;
-      font-size: 21px;
-      margin-top: -2px;
-      text-shadow: 0 1px 0 $blanco;
-      padding: 0;
-    }
+  &:hover {
+    background-color: $eliminar-bgk-hover;
+    border-color: $eliminar-border-hover;
   }
 }

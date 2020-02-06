@@ -113,7 +113,6 @@ const eliminarEmpleado = () => {
 };
 const botonEliminar = document.querySelector("#boton-eliminar");
 botonEliminar.addEventListener("click", () => {
-  //tbody.innerHTML = "";
   deleteTodo(window.deleteId, () => {
     showTodo();
   });
