@@ -37,13 +37,12 @@ const showTodo = () => {
         span.className = 'content-icons';
         const i = document.createElement('i'); //pencil
         i.className = 'fas fa-pencil-alt pencil';
+
         i.addEventListener('click', () => {
           modalEditar(todo);
         });
         span.appendChild(i);
-        
-
-
+      
           const tacho = document.createElement("i");
     tacho.className = "fas fa-trash-alt tacho";
     const idInput = document.createElement("input");
@@ -58,14 +57,14 @@ const showTodo = () => {
       eliminarEmpleado();
     });
     
-        td5.appendChild(span);
-        tr.appendChild(td);
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-        tr.appendChild(td5);
-        tbody.appendChild(tr);
+      td5.appendChild(span);
+      tr.appendChild(td);
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+      tr.appendChild(td4);
+      tr.appendChild(td5);
+      tbody.appendChild(tr);  
     }
 }
 
@@ -85,26 +84,26 @@ addBoton.addEventListener("click", async () => {
   showTodo();
 });
 
-
 const addNewEmployee = () => {
+  
     let botonAdd= document.querySelector('.wrapper-boton');
     botonAdd.addEventListener('click', () => {
+    
      let modal = document.querySelector('.modal-wrapper');
-     modal.setAttribute('style', 'display:block');
+     modal.setAttribute('style', 'display:flex');
+    
     });
  }
- 
- addNewEmployee();
 
+ addNewEmployee();
  /* Fin de agregar empleado */
+ 
   /* Desaparecer modal */
  const cancelModal = () => {
- 
      let botonCancel = document.querySelectorAll('.boton-cancel');
      botonCancel.forEach(boton => {
          boton.addEventListener('click', () => {
              let modal = document.querySelector('.modal-wrapper');
-             console.log(boton);
              modal.setAttribute('style', 'display:none');
          });
      })
@@ -129,7 +128,6 @@ botonEliminar.addEventListener("click", () => {
 
 
 /* Editar modal  */
-
 
 const modalEditar = (todo) => {
   const modal = document.querySelector('#modalEdit');

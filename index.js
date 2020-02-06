@@ -1,5 +1,5 @@
 /* Estos comentarios con nombres seran borrados, es para que cada una trabaje en su parte sin pisarse, luego en el merge final movemos bien si no quedaron en orden */
-const baseUrl = "https://tp-js-2-api-wjfqxquokl.now.sh/users";
+const baseUrl = "https://tp-js-2-api-wjfqxquokl.now.sh/users"; 
 let lista = [];
 let todo = {
     fullname :"",
@@ -65,9 +65,9 @@ const deleteTodo = async (id, callback) => {
 
 getLista();
 
-/* Funciones D Modificar */
+/* Funciones de Modificar */
 
-const editTodo = async (id,fullname, email, address, phone) => {
+const editTodo = async (id, fullname, email, address, phone) => {
     
     const todo = {
         fullname,
