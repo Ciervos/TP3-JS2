@@ -1,6 +1,7 @@
 /*Generar la tabla y lista en html */
 const showTodo = () => {
   const tbody = document.querySelector(".tabla-contenido");
+  tbody.innerHTML = "";
   for (let todo of lista) {
     const tr = document.createElement("tr");
     tr.className = "tabla-contenido-fila";
@@ -39,9 +40,15 @@ const showTodo = () => {
     span.appendChild(i);
     const tacho = document.createElement("i");
     tacho.className = "fas fa-trash-alt tacho";
+    const idInput = document.createElement("input");
+    idInput.setAttribute("type", "hidden");
+    idInput.value = todo.id;
+    tacho.appendChild(idInput);
+
     span.appendChild(tacho);
 
-    tacho.addEventListener("click", () => {
+    tacho.addEventListener("click", event => {
+      window.deleteId = event.currentTarget.children[0].value;
       eliminarEmpleado();
     });
 
@@ -104,27 +111,14 @@ const eliminarEmpleado = () => {
   let modal = document.querySelector("#modal-eliminar");
   modal.setAttribute("style", "display:block");
 };
-
-const deleteBoton = document.querySelector("#boton-eliminar");
-
-deleteBoton.addEventListener("click", async () => {
-  //Necesito el id de la api
-  const id = document.querySelector;
-  await deleteTodo(id);
+const botonEliminar = document.querySelector("#boton-eliminar");
+botonEliminar.addEventListener("click", () => {
+  //tbody.innerHTML = "";
+  deleteTodo(window.deleteId, () => {
+    showTodo();
+  });
 });
 
-const addBoton = document.querySelector("#todo-create");
-
-addBoton.addEventListener("click", async () => {
-  const fullname = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
-  const address = document.querySelector("#address").value;
-  const phone = document.querySelector("#phone").value;
-  const tbody = document.querySelector(".tabla-contenido");
-  tbody.textContent = "";
-  await createTodo(fullname, email, address, phone);
-  showTodo();
-});
 /* Fin de eliminacion modal */
 
 /* Editar modal  */

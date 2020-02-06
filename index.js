@@ -53,7 +53,7 @@ const getBuscar = async q => {
 /*Funciones C eliminar*/
 const deleteTodo = async (id, callback) => {
   try {
-    const res = await axios.delete(`${baseUrl}/:${id}`);
+    const res = await axios.delete(`${baseUrl}/${id}`);
     const index = lista.findIndex(todo => {
       return todo.id == id;
     });
