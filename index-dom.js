@@ -36,9 +36,27 @@ const showTodo = () => {
         span.className = 'content-icons';
         const i = document.createElement('i');
         i.className = 'fas fa-pencil-alt pencil';
-        span.appendChild(i);
 
+        i.addEventListener('click', () => {
+          const modal = document.querySelector('.modal-wrapper');
+          const titleModal = document.querySelector('.modal-title');
+          const botonSave = document.querySelector('#todo-create');
+          botonSave.value = 'Save';
+          titleModal.innerHTML = 'Edit Employee';
+          modal.setAttribute('style', 'display:block');
+
+          const fullname = document.querySelector('#name');
+          const email = document.querySelector('#email');
+          const address = document.querySelector('#address');
+          const phone = document.querySelector('#phone');
+          fullname.value = todo.fullname;
+          email.value = todo.email;
+          address.value = todo.address;
+          phone.value = todo.phone;
+          cancelModal (); 
+        });
         
+        span.appendChild(i);
         const tacho= document.createElement('i');
         tacho.className = 'fas fa-trash-alt tacho';
         span.appendChild(tacho);
@@ -62,23 +80,7 @@ const showTodo = () => {
 }
 
 /*Fin de generar tabla */
-i.addEventListener('click', () => {
 
-  console.table(todo);
-  const modal = document.querySelector('.modal-wrapper');
-  modal.setAttribute('style', 'display:block');
-
-  const fullname = document.querySelector('#name');
-  const email = document.querySelector('#email');
-  const address = document.querySelector('#address');
-  const phone = document.querySelector('#phone');
-  
-  fullname.value = todo.fullname;
-  email.value = todo.email;
-  address.value = todo.address;
-  phone.value = todo.phone;
-
-})
 /*Boton de header y agregar un nuevo empleado */
 const addBoton = document.querySelector('#todo-create');
 
@@ -107,7 +109,6 @@ const addNewEmployee = () => {
  /* Fin de agregar empleado */
   /* Desaparecer modal */
  const cancelModal = () => {
- 
      let botonCancel = document.querySelectorAll('.boton-cancel');
      botonCancel.forEach(boton => {
          boton.addEventListener('click', () => {
@@ -126,6 +127,19 @@ const addNewEmployee = () => {
 
 
 /* Editar modal  */
+const addModify = document.querySelector('#boton-save');
+
+addModify.addEventListener("click", async() => {
+  const name = document.querySelector('#name-edit').value;
+  const email = document.querySelector('#email-edit').value;
+  const address = document.querySelector('#address-edit').value;
+  const phone = document.querySelector('#phone-edit').value;
+
+  const tbody = document.querySelector('#body-list');
+  tbody.textContent = '';
+  await modifyTodo(name, email, userId, completed);
+  showTodo();
+})
 
 /* Fin de editar modal */
 

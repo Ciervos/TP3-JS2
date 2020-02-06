@@ -1,6 +1,6 @@
 
 /* Estos comentarios con nombres seran borrados, es para que cada una trabaje en su parte sin pisarse, luego en el merge final movemos bien si no quedaron en orden */
-const baseUrl = "https://tp-js-2-api-wjfqxquokl.now.sh/users";
+const baseUrl = "https://tp-js-2-api-wjfqxquokl.now.sh/users"; 
 let lista = [];
 let todo = {
     fullname :"",
@@ -68,5 +68,24 @@ const deleteTodo = async (id, callback) => {
     }
  }
 
+ /* Funcionalidad de edit */
+ const modifyTodo = async (fullname, email, address, phone) => {
+    try {
+        let data = {
+            fullname,
+            email,
+            address,
+            phone
+        }
+        const res = await axios.put(`${baseUrl}/:${id}`, data);
+        for (let i = 0; i < lista.length; i++) {
+            if(lista[i].id == id) {
+                lista[i] = res.data;
+            }
+        }
+    } catch (err) {
+        handleError(err)
+    }
+}
 
 getLista();
