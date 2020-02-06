@@ -36,30 +36,16 @@ const showTodo = () => {
         span.className = 'content-icons';
         const i = document.createElement('i'); //pencil
         i.className = 'fas fa-pencil-alt pencil';
-        span.appendChild(i);
-        const tacho= document.createElement('i');
-        tacho.className = 'fas fa-trash-alt tacho';
-        span.appendChild(tacho);
-
-        
         i.addEventListener('click', () => {
-
-          console.table(todo);
-          const modal = document.querySelector('.modal-wrapper');
-          modal.setAttribute('style', 'display:block');
-
-          const fullname = document.querySelector('#name');
-          const email = document.querySelector('#email');
-          const address = document.querySelector('#address');
-          const phone = document.querySelector('#phone');
-        
-          //esto hace que aparezca en los recuadros para editar
-          fullname.value = todo.fullname;
-          email.value = todo.email;
-          address.value = todo.address;
-          phone.value = todo.phone;
-
+          modalEditar(todo);
         });
+        span.appendChild(i);
+        
+
+
+       const tacho= document.createElement('i');
+       tacho.className = 'fas fa-trash-alt tacho';
+       span.appendChild(tacho);
         
         tacho.addEventListener('click', () => {
             tbody.textContent = '';
@@ -129,6 +115,40 @@ const addNewEmployee = () => {
 
 
 /* Editar modal  */
+
+
+const modalEditar = (todo) => {
+  const modal = document.querySelector('#modalEdit');
+  modal.setAttribute('style', 'display:block');
+
+  const fullname = document.querySelector('#name-edit');
+  const email = document.querySelector('#email-edit');
+  const address = document.querySelector('#address-edit');
+  const phone = document.querySelector('#phone-edit');
+  const id = document.querySelector('#id-edit');
+
+  //esto hace que aparezca en los recuadros para editar
+  fullname.value = todo.fullname;
+  email.value = todo.email;
+  address.value = todo.address;
+  phone.value = todo.phone;
+  id.value = todo.id
+};
+
+
+const editBoton = document.querySelector('#todo-create-edit');
+
+editBoton.addEventListener("click", async () => {
+  const fullname = document.querySelector('#name-edit').value;
+  const email = document.querySelector('#email-edit').value;
+  const address = document.querySelector('#address-edit').value;
+  const phone = document.querySelector('#phone-edit').value;
+  const id = document.querySelector('#id-edit').value;
+  const tbody = document.querySelector('.tabla-contenido');
+  tbody.textContent = '';
+  await editTodo(id,fullname, email, address, phone);
+  showTodo();
+});
 
 /* Fin de editar modal */
 

@@ -73,6 +73,19 @@ getLista();
 
 /* Funciones D Modificar */
 
-const editTodo = () => {
+const editTodo = async (id,fullname, email, address, phone) => {
     
+    const todo = {
+        fullname,
+        email,
+        address,
+        phone
+    }
+    try{
+        const res= await axios.put(`${baseUrl}/${id}`,todo)
+        lista = res.data     
+
+    }catch(err){
+        handleError(err)
+    }
 }
