@@ -2,13 +2,13 @@
 const baseUrl = "https://tp-js-2-api-wjfqxquokl.now.sh/users";
 let lista = [];
 let todo = {
-  fullname: "",
-  email: "",
-  address: "",
-  phone: ""
+    fullname :"",
+    email: "",
+    address: "",
+    phone: ""
 };
-const handleError = err => {
-  alert(`Hubo un error. ${err}`);
+const handleError = err =>{
+    alert(`Hubo un error. ${err}`);
 };
 
 /*Funciones A */
@@ -30,22 +30,21 @@ const createTodo = async (fullname, email, address, phone) => {
 /*Funciones B */
 /* accion filtrar */
 const getLista = async () => {
-  await axios
-    .get(`${baseUrl}`)
-    .then(res => {
-      lista = res.data;
-      showTodo();
-    })
-    .catch(handleError);
+    await axios.get(`${baseUrl}`)
+        .then(res => {
+            lista = res.data;
+            showTodo();
+        })
+        .catch(handleError);
 };
 
+
 const getBuscar = async q => {
-  await axios
-    .get(`${baseUrl}/?search=${q}`)
-    .then(res => {
-      lista = res.data;
-    })
-    .catch(handleError);
+    await axios.get(`${baseUrl}/?search=${q}`)
+        .then(res => {
+            lista = res.data;
+        })
+        .catch(handleError);
 };
 
 /* validar campos llenos */
@@ -65,3 +64,22 @@ const deleteTodo = async (id, callback) => {
 };
 
 getLista();
+
+/* Funciones D Modificar */
+
+const editTodo = async (id,fullname, email, address, phone) => {
+    
+    const todo = {
+        fullname,
+        email,
+        address,
+        phone
+    }
+    try{
+        const res= await axios.put(`${baseUrl}/${id}`,todo)
+        lista = res.data     
+
+    }catch(err){
+        handleError(err)
+    }
+}
