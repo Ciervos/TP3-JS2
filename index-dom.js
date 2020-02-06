@@ -21,6 +21,7 @@ const showTodo = () => {
         spanEmail.textContent = todo.email;
         td2.appendChild(spanEmail);
 
+
         const td3 = document.createElement('td');
         const spanAddress = document.createElement('span');
         spanAddress.textContent = todo.address;
@@ -43,16 +44,19 @@ const showTodo = () => {
         
 
 
-       const tacho= document.createElement('i');
-       tacho.className = 'fas fa-trash-alt tacho';
-       span.appendChild(tacho);
-        
-        tacho.addEventListener('click', () => {
-            tbody.textContent = '';
-            deleteTodo(deleteid, () => {
-              showTodo();
-            });
-          });
+          const tacho = document.createElement("i");
+    tacho.className = "fas fa-trash-alt tacho";
+    const idInput = document.createElement("input");
+    idInput.setAttribute("type", "hidden");
+    idInput.value = todo.id;
+    tacho.appendChild(idInput);
+
+    span.appendChild(tacho);
+
+    tacho.addEventListener("click", event => {
+      window.deleteId = event.currentTarget.children[0].value;
+      eliminarEmpleado();
+    });
     
         td5.appendChild(span);
         tr.appendChild(td);
@@ -109,9 +113,19 @@ const addNewEmployee = () => {
  cancelModal();
   /* Fin de desaparecer modal */
 
-  /* Confirmacion de eliminacion modal */
+/* Confirmacion de eliminacion modal */
+const eliminarEmpleado = () => {
+  let modal = document.querySelector("#modal-eliminar");
+  modal.setAttribute("style", "display:block");
+};
+const botonEliminar = document.querySelector("#boton-eliminar");
+botonEliminar.addEventListener("click", () => {
+  deleteTodo(window.deleteId, () => {
+    showTodo();
+  });
+});
 
- /* Fin de eliminacion modal */
+/* Fin de eliminacion modal */
 
 
 /* Editar modal  */
@@ -161,4 +175,4 @@ const filtrar = () =>{
 
 let botonBuscar = document.querySelector("#boton-filtro");
 botonBuscar.addEventListener("click", filtrar);
-  /* Fin de filtro y busqueda */ 
+  /* Fin de filtro y busqueda */

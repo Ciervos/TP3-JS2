@@ -1,4 +1,3 @@
-
 /* Estos comentarios con nombres seran borrados, es para que cada una trabaje en su parte sin pisarse, luego en el merge final movemos bien si no quedaron en orden */
 const baseUrl = "https://tp-js-2-api-wjfqxquokl.now.sh/users";
 let lista = [];
@@ -14,21 +13,19 @@ const handleError = err =>{
 
 /*Funciones A */
 const createTodo = async (fullname, email, address, phone) => {
-   
-    try {
-        let data = {
-            fullname,
-            email,
-            address,
-            phone,
-        }
-        const res = await axios.post(baseUrl, data);
-        lista.push(res.data);
-        
-    } catch (err) {
+  try {
+    let data = {
+      fullname,
+      email,
+      address,
+      phone
+    };
+    const res = await axios.post(baseUrl, data);
+    lista.push(res.data);
+  } catch (err) {
     handleError(err);
-    }
- }
+  }
+};
 
 /*Funciones B */
 /* accion filtrar */
@@ -50,24 +47,21 @@ const getBuscar = async q => {
         .catch(handleError);
 };
 
-
 /* validar campos llenos */
 
 /*Funciones C eliminar*/
 const deleteTodo = async (id, callback) => {
-    try {
-        const res = await axios.delete(`${baseUrl}/:${id}`);
-        const index = lista.findIndex(todo => {
-            return todo.id == id;
-        })
-        lista.splice(index, 1);
-        callback();
-        
-    } catch (err) {
-        handleError(err)
-    }
- }
-
+  try {
+    const res = await axios.delete(`${baseUrl}/${id}`);
+    const index = lista.findIndex(todo => {
+      return todo.id == id;
+    });
+    lista.splice(index, 1);
+    callback();
+  } catch (err) {
+    handleError(err);
+  }
+};
 
 getLista();
 

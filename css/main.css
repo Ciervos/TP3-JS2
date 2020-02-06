@@ -3,9 +3,15 @@
 /*colores*/
 /*components*/
 .wrapper-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 15px;
   background: #435d7d;
   color: #ffffff;
@@ -13,6 +19,7 @@
   width: 80%;
   padding: 16px 27px;
 }
+
 .wrapper-menu .title {
   font-size: 24px;
 }
@@ -22,15 +29,22 @@
   background-color: #5cb85c;
   border-color: #4cae4c;
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .wrapper-boton i {
   color: #ffffff;
   font-size: 21px;
   padding: 2px 6px;
 }
+
 .wrapper-boton:hover {
   background-color: #449d44;
   border-color: #398439;
@@ -50,11 +64,30 @@
 
 /*Filtro*/
 .filtro-contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   height: 50px;
   width: 100%;
 }
+
+.filtro-contenedor .filtro-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .filtro-contenedor .filtro-form {
   display: flex;
   flex-direction: row;
@@ -64,6 +97,7 @@
   height: 30px;
   width: 80%;
 }
+
 .filtro-contenedor .filtro-form .filtro-boton {
   background-color: #5cb85c;
   border-style: none;
@@ -83,6 +117,20 @@
   width: 35%;
 }
 
+.filtro-contenedor .filtro-form .filtro-boton:hover {
+  background-color: #449d44;
+}
+
+.filtro-contenedor .filtro-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: 10px;
+  font-family: "Varela Round", sans-serif;
+  width: 35%;
+}
+
 .tabla {
   background-color: transparent;
   border-collapse: collapse;
@@ -96,12 +144,15 @@
 }
 
 .tabla-encabezado .tabla-encabezado-fila {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   box-sizing: border-box;
 }
 .tabla-encabezado .tabla-encabezado-fila:first-child {
   border-top: 0;
   width: 60px;
 }
+
 .tabla-encabezado .tabla-encabezado-fila .tabla-encabezado-celda {
   border-bottom: 2px solid #f5f5f5;
   border-color: #f5f5f5;
@@ -113,11 +164,14 @@
 }
 
 .tabla-contenido {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 .tabla-contenido .tabla-contenido-fila:nth-of-type(2n + 1) {
   background-color: #f5f5f5;
 }
+
 .tabla-contenido .tabla-contenido-celda {
   border-color: #f5f5f5;
   border-top: 1px solid #f5f5f5;
@@ -126,14 +180,17 @@
 }
 
 .checkbox {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   opacity: 0;
+
   position: relative;
 }
 
 .content-icons {
   padding-left: 13px;
 }
+
 .content-icons i {
   padding: 6px;
   font-size: 16px;
@@ -147,6 +204,38 @@
   color: #f44336;
 }
 
+.tacho:hover {
+  cursor: pointer;
+}
+
+#modal-alerta {
+  color: #8a6d3b;
+  font-size: 12px;
+}
+
+#boton-eliminar {
+  background-color: #d9534f;
+  border: 1px solid transparent;
+  border-color: #d43f3a;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: -2px;
+  min-width: 100px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  padding: 6px 12px;
+  vertical-align: middle;
+}
+
+#boton-eliminar:hover {
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
 /*sections*/
 body {
   font-family: "Varela Round", sans-serif;
@@ -156,7 +245,9 @@ body {
 .contenedor-principal {
   background-color: #ffffff;
   border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+
   padding: 20px 27px;
   width: 80%;
   margin-left: 107px;
