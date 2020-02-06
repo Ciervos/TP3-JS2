@@ -38,24 +38,9 @@ const showTodo = () => {
         i.className = 'fas fa-pencil-alt pencil';
 
         i.addEventListener('click', () => {
-          const modal = document.querySelector('.modal-wrapper');
-          const titleModal = document.querySelector('.modal-title');
-          const botonSave = document.querySelector('#todo-create');
-          botonSave.value = 'Save';
-          titleModal.innerHTML = 'Edit Employee';
-          modal.setAttribute('style', 'display:block');
-
-          const fullname = document.querySelector('#name');
-          const email = document.querySelector('#email');
-          const address = document.querySelector('#address');
-          const phone = document.querySelector('#phone');
-          fullname.value = todo.fullname;
-          email.value = todo.email;
-          address.value = todo.address;
-          phone.value = todo.phone;
-          cancelModal (); 
+          modalEditar(todo);
         });
-        
+         
         span.appendChild(i);
         const tacho= document.createElement('i');
         tacho.className = 'fas fa-trash-alt tacho';
@@ -95,24 +80,20 @@ addBoton.addEventListener("click", async () => {
   showTodo();
 });
 
-
 const addNewEmployee = () => {
   
     let botonAdd= document.querySelector('.wrapper-boton');
     botonAdd.addEventListener('click', () => {
-      document.querySelector('#name').value= "";
-      document.querySelector('#email').value = "";
-     document.querySelector('#address').value = "" ;
-      document.querySelector('#phone').value = "";
+    
      let modal = document.querySelector('.modal-wrapper');
      modal.setAttribute('style', 'display:flex');
     
     });
  }
- 
- addNewEmployee();
 
+ addNewEmployee();
  /* Fin de agregar empleado */
+ 
   /* Desaparecer modal */
  const cancelModal = () => {
      let botonCancel = document.querySelectorAll('.boton-cancel');
@@ -133,19 +114,7 @@ const addNewEmployee = () => {
 
 
 /* Editar modal  */
-const addModify = document.querySelector('#todo-create');
 
-addModify.addEventListener("click", async() => {
-  const name = document.querySelector('#name').value;
-  const email = document.querySelector('#email').value;
-  const address = document.querySelector('#address').value;
-  const phone = document.querySelector('#phone').value;
-
-  const tbody = document.querySelector('#body-list');
-  tbody.textContent = '';
-  await modifyTodo(name, email, userId, completed);
-  showTodo();
-})
 
 /* Fin de editar modal */
 
