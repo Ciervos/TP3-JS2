@@ -49,10 +49,12 @@
       </tr>
     </thead>
     <tbody class="tabla-contenido"></tbody>
-    </tbody>
-  </table>
+  </tbody>
+</table>
 </div>
 <!-- Fin Lista -->
+
+<!-- Modales -->
 <!-- Modal add -->
 <div class="modal-wrapper">
   <div class="modal-content-form">
@@ -88,8 +90,8 @@
     </form>
   </div>
 </div>
-  <!-- Fin del modal-->
-  <!-- Modal Edit -->
+<!-- Fin del modal add-->
+<!-- Modal Editar -->
 <div class="modal-wrapper" id="modalEdit">
   <div class="modal-content-form">
     <form action="">
@@ -99,14 +101,14 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <label>Name</label>
-          <input id="name-edit" type="text" class="form-control">
+            <label>Name</label>
+            <input id="name-edit" type="text" class="form-control">
         </div>
         <div class="modal-footer">
-          <div class="form-group">
-              <label>Email</label>
-              <input id="email-edit" type="email" class="form-control">
-          </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input id="email-edit" type="email" class="form-control">
+            </div>
         </div>
         <div class="form-group">
             <label>Address</label>
@@ -125,7 +127,25 @@
     </form>
   </div>
 </div>
-<!-- Fin del modal-->
+<!-- Fin modal Editar -->
+<!-- Modal Eliminar -->
+<div id="modal-eliminar">
+  <div class="modal-eliminar-header">
+    <h2 class="modal-eliminar-header-title">Delete Employee</h2>
+    <button class="boton-cancel">X</button>
+  </div>
+  <div class="modal-eliminar-body">
+    <p class="modal-mensaje">Are you sure you want to delete these Records</p>
+    <p id="modal-alerta" class="modal-alerta">This action cannot be undone</p>
+  </div>
+  <div class="modal-eliminar-footer">
+    <input class="boton-cancel" type="button" value="Cancel">
+    <input id="boton-eliminar" class="boton-eliminar" type="button" value="Delete">
+  </div>
+</div>
+<!-- Fin modal Eliminar -->
+<!-- Fin modales -->
+
 <!-- Javascripts -->
 <script src="index-dom.js"></script>
 <script src="index.js"></script>

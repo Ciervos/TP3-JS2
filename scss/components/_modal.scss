@@ -1,3 +1,31 @@
+
+#modal-alerta {
+  color: $alerta;
+  font-size: 12px;
+}
+
+#boton-eliminar {
+  background-color: $eliminar-bgk;
+  border: 1px solid transparent;
+  border-color: $eliminar-border;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: $blanco;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: -2px;
+  min-width: 100px;
+  text-align: center;
+  text-shadow: 0 1px 0 $blanco;
+  padding: 6px 12px;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $eliminar-bgk-hover;
+    border-color: $eliminar-border-hover;
+  }
+}
+
 .modal-title{
     display: inline-block;
     font-size: 18px;
@@ -40,3 +68,4 @@
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
 
 }
+
