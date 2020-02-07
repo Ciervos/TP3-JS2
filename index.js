@@ -43,11 +43,46 @@ const getBuscar = async q => {
     await axios.get(`${baseUrl}/?search=${q}`)
         .then(res => {
             lista = res.data;
+            const tbody = document.querySelector('.tabla-contenido');
+            tbody.textContent = '';
+            showTodo();
         })
         .catch(handleError);
 };
 
 /* validar campos llenos */
+/* Nombre (Máximo 50 carácteres)
+Dirección (Máximo 60 carácteres)
+Telefono (Solo números, espacios y/o guiones medios. Validar el formato utilizando expresiones regulares)
+Email (Validar el formato utilizando expresiones regulares)
+ */
+const formatoMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const formatoTel = /^\d{4}-\d{4}$/;
+const validarCampos = (fullname, email, address, phone) =>{
+    if(fullname.length==0 || fullname.length>=50){
+      
+        alert("Nombre ingresado no válido. Máx: 50 cáracteres");
+       
+        throw "Error en nombre ingresado"
+    }else if(address.length<=0 || address.length>=60){
+        alert("Dirección ingresado no válido. Máx: 60 cáracteres");
+        throw "Error en dirección ingresado" 
+    }
+
+    if(email.match(formatoMail)){
+        
+    }else{
+        alert("Mail inválido");
+        throw "Error en mail ingresado";
+    }
+
+    if(phone.match(formatoTel)){
+
+    }else{
+        alert("Tel inválido, Formato esperado: XXXX-XXXX");
+        throw "Error en telefono ingresado. Formato esperado: XXXX-XXXX"     
+    } 
+} 
 
 /*Funciones C eliminar*/
 const deleteTodo = async (id, callback) => {

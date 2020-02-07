@@ -105,12 +105,14 @@ const boton = document.querySelector('#todo-create');
     const tbody = document.querySelector('.tabla-contenido');
     const id = document.querySelector('#id-edit').value;
     tbody.textContent = '';
+    validarCampos(fullname, email, address, phone);
     if(id === ""){
       await createTodo(fullname, email, address, phone);
     }
     else {
       await editTodo(id, fullname, email, address, phone);
     }
+
     showTodo();
     eliminar();
 });
