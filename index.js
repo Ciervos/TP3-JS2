@@ -63,8 +63,6 @@ const deleteTodo = async (id, callback) => {
   }
 };
 
-getLista();
-
 /* Funciones de Modificar */
 
 const editTodo = async (id, fullname, email, address, phone) => {
@@ -83,3 +81,4 @@ const editTodo = async (id, fullname, email, address, phone) => {
         handleError(err)
     }
 }
+getLista();
