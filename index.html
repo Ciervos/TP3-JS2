@@ -15,14 +15,14 @@
 
 <body>
   <!--Header-->
-  <header class="wrapper-menu">
-      <h1 class="title">Manage Employees</h1>
-        <div class="wrapper-boton">
-            <a href="#">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </a>
-            <span class="text">Add New Employee</span>
-        </div>
+<header class="wrapper-menu">
+  <h1 class="title">Manage Employees</h1>
+    <div class="wrapper-boton">
+        <a href="#">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </a>
+        <span class="text">Add New Employee</span>
+    </div>
 </header>
 <!-- Cierre Header-->
 <div class="contenedor-principal">
@@ -30,60 +30,60 @@
 <!-- Filter-->  
  <section class="filtro-contenedor">
    <form class="filtro-form" action="#">    
-      <input id="input-filtro" class="filtro-input" placeholder="  Filter.." type="text"></input>
+      <input id="input-filtro" class="filtro-input" placeholder="Filter.." type="text"></input>
       <input id="boton-filtro" class="filtro-boton" type="submit" value="Submit">
     </form>  
   </section>
 <!-- Cierre Filter-->  
 <!-- Lista -->
-  <table class="tabla">
-    <thead class="tabla-encabezado">
-      <tr class="tabla-encabezado-fila">
-        <th class="tabla-encabezado-celda">
-          <input id="seleccionarTodos" class="checkbox" type="checkbox" />
-        </th>
-        <th class="tabla-encabezado-celda">Name</th>
-        <th class="tabla-encabezado-celda">Email</th>
-        <th class="tabla-encabezado-celda">Address</th>
-        <th class="tabla-encabezado-celda">Phone</th>
-        <th class="tabla-encabezado-celda">Actions</th>
-      </tr>
-    </thead>
-    <tbody class="tabla-contenido"></tbody>
+<table class="tabla">
+  <thead class="tabla-encabezado">
+    <tr class="tabla-encabezado-fila">
+      <th class="tabla-encabezado-celda">
+        <input id="seleccionarTodos" class="checkbox" type="checkbox" />
+      </th>
+      <th class="tabla-encabezado-celda">Name</th>
+      <th class="tabla-encabezado-celda">Email</th>
+      <th class="tabla-encabezado-celda">Address</th>
+      <th class="tabla-encabezado-celda">Phone</th>
+      <th class="tabla-encabezado-celda">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="tabla-contenido"></tbody>
   </tbody>
 </table>
 </div>
 <!-- Fin Lista -->
 <!-- Modales -->
 <!-- Modal add && edit -->
-<div class="modal-wrapper">
+<div class="modal-wrapper js-modal-wrapper">
   <div class="modal-content-form">
     <form action="#">
       <div class="modal-header">
-        <h2 class="modal-title">Add Employee</h2>
-        <button class="boton-cancel equiz">x</button>
+        <h2 class="modal-title js-modal-title">Add Employee</h2>
+        <button class="js-boton-cancel boton-cancel-x">x</button>
       </div>
       <div class="modal-body">
       <div class="form-group">
         <label>Name</label>
-        <input id="name" type="text" class="form-control">
+        <input id="name" type="text">
       </div>
       <div class="form-group">
           <label>Email</label>
-          <input id="email" type="email" class="form-control">
+          <input id="email" type="email">
       </div>
       <div class="form-group">
           <label>Address</label>
-          <textarea id="address" class="form-control"></textarea>
+          <textarea id="address"></textarea>
       </div>
       <div class="form-group">
           <label>Phone</label>
-          <input id="phone" type="text" class="form-control">
+          <input id="phone" type="text">
       </div>
       </div>
       <div class="modal-footer">
-          <button class="cancel boton-cancel" type="button" >Cancel</button>
-          <button class="add" id="todo-create"type="button">Add</button>
+        <button class="boton-cancel js-boton-cancel" type="button">Cancel</button>
+        <button class="add" id="todo-create"type="button">Add</button>
       </div>
       <input type="hidden" id="id-edit">
     </form>
@@ -92,19 +92,22 @@
 <!-- Fin del modal add && edit-->
 
 <!-- Modal Eliminar -->
-
-<div id="modal-eliminar">
-  <div class="modal-eliminar-header">
-    <h2 class="modal-eliminar-header-title">Delete Employee</h2>
-    <button class="boton-cancel">X</button>
-  </div>
-  <div class="modal-eliminar-body">
-    <p class="modal-mensaje">Are you sure you want to delete these Records</p>
-    <p id="modal-alerta" class="modal-alerta">This action cannot be undone</p>
-  </div>
-  <div class="modal-eliminar-footer">
-    <input class="boton-cancel" type="button" value="Cancel">
-    <input id="boton-eliminar" class="boton-eliminar" type="button" value="Delete">
+<div class="modal-wrapper js-modal-eliminar">
+  <div class="modal-content-form">
+      <form action="#">
+        <div class="modal-header">
+          <h2 class="modal-title">Delete Employee</h2>
+          <button class="js-boton-cancel boton-cancel-x">x</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-mensaje">Are you sure you want to delete these Records</p>
+          <p id="modal-alerta" class="modal-alerta">This action cannot be undone</p>
+        </div>
+        <div class="modal-footer">
+          <button class="boton-cancel js-boton-cancel" type="button">Cancel</button>
+          <button id="boton-eliminar" type="button">Delete</button>
+      </form>
+    </div>
   </div>
 </div>
 <!-- Fin modal Eliminar -->

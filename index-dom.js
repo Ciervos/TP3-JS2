@@ -77,17 +77,19 @@ const addNewEmployee = () => {
   const botonAdd= document.querySelector('.wrapper-boton');
     botonAdd.addEventListener('click', () => {
     
-      const title = document.querySelector('.modal-title');
+      const title = document.querySelector('.js-modal-title');
       title.innerHTML = "Add Employee";
+      
       const buttonAdd = document.querySelector('#todo-create');
       buttonAdd.innerHTML = "Add";
+      buttonAdd.setAttribute('style', 'background:#5cb85c');
       
       document.querySelector('#name').value = "";
       document.querySelector('#email').value = "";
       document.querySelector('#address').value = "";
       document.querySelector('#phone').value = "";
       document.querySelector('#id-edit').value = "";
-      let modal = document.querySelector('.modal-wrapper');
+      let modal = document.querySelector('.js-modal-wrapper');
       modal.setAttribute('style', 'display:block'); 
     });
   }
@@ -119,10 +121,10 @@ const boton = document.querySelector('#todo-create');
  /* Fin de agregar o editar los datos del empleado */
 
   /* Desaparecer modal */
-  const modalwrapper = document.querySelector('.modal-wrapper');
-  const modaleliminar = document.querySelector("#modal-eliminar");
+  const modalwrapper = document.querySelector('.js-modal-wrapper');
+  const modaleliminar = document.querySelector(".js-modal-eliminar");
   
-  const botonCancel = document.querySelectorAll('.boton-cancel');
+  const botonCancel = document.querySelectorAll('.js-boton-cancel');
   const eliminar =() => {
     modalwrapper.setAttribute('style', 'display:none');
     modaleliminar.setAttribute('style', 'display:none');
@@ -150,11 +152,12 @@ botonEliminar.addEventListener("click", () => {
 
 const modalEditar = (todo) => {
   
-  const title = document.querySelector('.modal-title');
+  const title = document.querySelector('.js-modal-title');
   title.innerHTML = "Edit Employee";
 
   const buttonSave = document.querySelector('#todo-create');
   buttonSave.innerHTML = "Save";
+  buttonSave.setAttribute('style', 'background:#5bc0de');
   document.querySelector('#name').value = "";
   document.querySelector('#email').value = "";
   document.querySelector('#address').value = "";

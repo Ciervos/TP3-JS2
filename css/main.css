@@ -199,11 +199,8 @@ table {
 
 #modal-alerta {
   color: #8a6d3b;
-  font-size: 12px;
-}
-
-#modal-eliminar {
-  display: none;
+  font-size: 11.05px;
+  padding-bottom: 27px;
 }
 
 #boton-eliminar {
@@ -230,10 +227,10 @@ table {
 .modal-title {
   display: inline-block;
   font-size: 18px;
-  padding: 12px 10px 10px 26px;
+  padding: 25px 10px 21px 26px;
 }
 
-.equiz {
+.boton-cancel-x {
   display: inline-block;
   font-size: 21px;
   line-height: 1;
@@ -242,10 +239,11 @@ table {
   opacity: 0.2;
   border: none;
   height: 23px;
+  border: none;
   width: 20px;
   padding: 23px 31px 17px 17px;
 }
-.equiz:hover {
+.boton-cancel-x:hover {
   cursor: pointer;
   color: #000;
 }
@@ -314,11 +312,15 @@ table {
   margin-left: 10px;
 }
 .modal-footer button.add {
-  background: #5cb85c;
   color: #ffffff;
 }
-.modal-footer button.cancel {
+.modal-footer button.boton-cancel {
   background: #ffffff;
+}
+
+.modal-mensaje {
+  font-size: 13px;
+  line-height: 4;
 }
 
 body {
