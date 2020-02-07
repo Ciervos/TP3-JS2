@@ -1,5 +1,9 @@
-@import 'variables.scss';
+
+@import "variables.scss";
+@import "reset.scss";
 @import "../components/header.scss";
 @import "../components/filter.scss";
 @import "../components/tabla.scss";
 @import "../components/modal.scss";
+
+
