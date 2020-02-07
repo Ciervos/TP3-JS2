@@ -4,6 +4,10 @@
   font-size: 12px;
 }
 
+#modal-eliminar{
+    display: none;
+}
+
 #boton-eliminar {
   background-color: $eliminar-bgk;
   border: 1px solid transparent;
@@ -118,6 +122,7 @@
         }
     }
 }
+
 
 
 

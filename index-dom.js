@@ -1,6 +1,8 @@
 /*Generar la tabla y lista en html */
 const showTodo = () => {
+
     const tbody = document.querySelector('.tabla-contenido');
+    tbody.innerHTML = "";
     for(let todo of lista) {
       const tr = document.createElement('tr');
       tr.className= 'tabla-contenido-fila';
@@ -115,10 +117,13 @@ const boton = document.querySelector('#todo-create');
  /* Fin de agregar o editar los datos del empleado */
 
   /* Desaparecer modal */
-  const modal = document.querySelector('.modal-wrapper');
+  const modalwrapper = document.querySelector('.modal-wrapper');
+  const modaleliminar = document.querySelector("#modal-eliminar");
+  
   const botonCancel = document.querySelectorAll('.boton-cancel');
   const eliminar =() => {
-    modal.setAttribute('style', 'display:none');
+    modalwrapper.setAttribute('style', 'display:none');
+    modaleliminar.setAttribute('style', 'display:none');
   }
   botonCancel.forEach(boton => {
     boton.addEventListener('click',eliminar);
@@ -127,13 +132,14 @@ const boton = document.querySelector('#todo-create');
 
 /* Confirmacion de eliminacion modal */
 const eliminarEmpleado = () => {
-  let modal = document.querySelector("#modal-eliminar");
-  modal.setAttribute("style", "display:block");
+
+  modaleliminar.setAttribute("style", "display:block");
 };
 const botonEliminar = document.querySelector("#boton-eliminar");
 botonEliminar.addEventListener("click", () => {
   deleteTodo(window.deleteId, () => {
     showTodo();
+    eliminar();
   });
 });
 /* Fin de eliminacion modal */
@@ -141,7 +147,7 @@ botonEliminar.addEventListener("click", () => {
 /* Editar modal  */
 
 const modalEditar = (todo) => {
-  const modal = document.querySelector('.modal-wrapper');
+  
   const title = document.querySelector('.modal-title');
   title.innerHTML = "Edit Employee";
 
@@ -152,7 +158,7 @@ const modalEditar = (todo) => {
   document.querySelector('#address').value = "";
   document.querySelector('#phone').value = "";
   document.querySelector('#id-edit').value = "";
-  modal.setAttribute('style', 'display:block');
+  modalwrapper.setAttribute('style', 'display:block');
 
   const fullname = document.querySelector('#name');
   const email = document.querySelector('#email');
