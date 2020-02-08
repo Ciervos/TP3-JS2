@@ -1,39 +1,42 @@
 /*Filtro*/
-.filtro-contenedor{
-    display: flex;
-    flex-direction: row-reverse;
-    height: 50px;
-    width: 100%;
+.filtro-contenedor {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 50px;
+  width: 100%;
 
-.filtro-form{
+  .filtro-form {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 15px;
-    margin-left: 15px;  
-    height: 30px;  
+    margin-left: 15px;
+    height: 30px;
     width: 80%;
 
-  .filtro-boton{
-    background-color: $verde;
-    border-style: none;
-    color: $blanco;
-    cursor: pointer;
-    font-family: $font;
-    &:hover{
-      background-color: darken($verde, 10%);
-    }    
+    .filtro-boton {
+      background-color: $verde;
+      border-style: none;
+      color: $blanco;
+      cursor: pointer;
+      font-family: $font;
+      &:hover {
+        background-color: darken($verde, 10%);
+      }
     }
-}
+  }
 
-.filtro-input{
- 
- border: 1px solid #ccc;
- border-radius: 5px;
- box-sizing: border-box;
- margin-right: 10px;
- font-family: $font; 
- width: 35%;
+  .filtro-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-family: $font;
+    width: 35%;
 
- }
+    &:focus {
+      background-color: $gris;
+      color: $azul;
+    }
+  }
 }

@@ -7,6 +7,7 @@
   font-size: 13px;
   line-height: 1.5;
   margin-bottom: 20px;
+  table-layout: fixed;
   width: 100%;
 }
 
@@ -24,6 +25,7 @@
       border-color: $gris;
       border-top: 0;
       box-sizing: border-box;
+      font-weight: bold;
       padding: 12px 15px;
       text-align: left;
       vertical-align: middle;
@@ -35,22 +37,57 @@
   box-sizing: border-box;
 
   .tabla-contenido-fila {
+    &:hover {
+      background-color: darken($color: $blanco, $amount: 10);
+    }
+
     &:nth-of-type(2n + 1) {
       background-color: $gris;
+      &:hover {
+        background-color: darken($color: $gris, $amount: 10);
+      }
     }
   }
 
-  .tabla-contenido-celda {
+  td {
     border-color: $gris;
     border-top: 1px solid $gris;
     padding: 12px 15px;
     vertical-align: middle;
   }
+
+  th,
+  td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    white-space: break-spaces;
+    word-wrap: break-word;
+  }
 }
 
-.checkbox {
-  box-sizing: border-box;
-  position: relative;
+.celda-checkbox {
+  width: 5%;
+
+  .checkbox {
+    box-sizing: border-box;
+    position: relative;
+  }
+}
+
+.celda-text {
+  width: 20%;
+}
+
+.celda-email {
+  width: 35%;
+}
+
+.celda-phone {
+  width: 12%;
+}
+
+.celda-actions {
+  width: 12%;
 }
 
 .content-icons {
@@ -63,11 +100,17 @@
 
 .pencil {
   color: $amarillo;
+
+  &:hover {
+    color: darken($color: $amarillo, $amount: 12);
+    cursor: pointer;
+  }
 }
 .tacho {
   color: $rojo;
 
   &:hover {
+    color: darken($color: $rojo, $amount: 12);
     cursor: pointer;
   }
 }

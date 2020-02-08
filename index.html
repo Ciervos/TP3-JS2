@@ -39,14 +39,14 @@
 <table class="tabla">
   <thead class="tabla-encabezado">
     <tr class="tabla-encabezado-fila">
-      <th class="tabla-encabezado-celda">
+      <th class="tabla-encabezado-celda celda-checkbox">
         <input id="seleccionarTodos" class="checkbox" type="checkbox" />
       </th>
-      <th class="tabla-encabezado-celda">Name</th>
-      <th class="tabla-encabezado-celda">Email</th>
-      <th class="tabla-encabezado-celda">Address</th>
-      <th class="tabla-encabezado-celda">Phone</th>
-      <th class="tabla-encabezado-celda">Actions</th>
+      <th class="tabla-encabezado-celda celda-text">Name</th>
+      <th class="tabla-encabezado-celda celda-email">Email</th>
+      <th class="tabla-encabezado-celda celda-text">Address</th>
+      <th class="tabla-encabezado-celda celda-phone">Phone</th>
+      <th class="tabla-encabezado-celda celda-actions">Actions</th>
     </tr>
   </thead>
   <tbody class="tabla-contenido"></tbody>
@@ -100,12 +100,12 @@
           <button class="js-boton-cancel boton-cancel-x">x</button>
         </div>
         <div class="modal-body">
-          <p class="modal-mensaje">Are you sure you want to delete these Records</p>
+          <p class="modal-mensaje">Are you sure you want to delete these Records?</p>
           <p id="modal-alerta" class="modal-alerta">This action cannot be undone</p>
         </div>
         <div class="modal-footer">
           <button class="boton-cancel js-boton-cancel" type="button">Cancel</button>
-          <button id="boton-eliminar" type="button">Delete</button>
+          <button id="boton-eliminar" class="modal-eliminar-boton"  type="button">Delete</button>
       </form>
     </div>
   </div>
