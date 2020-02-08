@@ -198,6 +198,7 @@ table {
   border-top: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-weight: bold;
   padding: 12px 15px;
   text-align: left;
   vertical-align: middle;
@@ -220,7 +221,7 @@ table {
   background-color: gainsboro;
 }
 
-.tabla-contenido .tabla-contenido-celda {
+.tabla-contenido td {
   border-color: #f5f5f5;
   border-top: 1px solid #f5f5f5;
   padding: 12px 15px;
@@ -236,13 +237,29 @@ table {
 }
 
 .celda-checkbox {
-  width: 40px;
+  width: 5%;
 }
 
 .celda-checkbox .checkbox {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+}
+
+.celda-text {
+  width: 20%;
+}
+
+.celda-email {
+  width: 35%;
+}
+
+.celda-phone {
+  width: 12%;
+}
+
+.celda-actions {
+  width: 12%;
 }
 
 .content-icons {
