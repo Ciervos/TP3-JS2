@@ -163,6 +163,11 @@ table {
   width: 35%;
 }
 
+.filtro-contenedor .filtro-input:focus {
+  background-color: #f5f5f5;
+  color: #435d7d;
+}
+
 .tabla {
   background-color: transparent;
   border-collapse: collapse;
@@ -173,6 +178,7 @@ table {
   font-size: 13px;
   line-height: 1.5;
   margin-bottom: 20px;
+  table-layout: fixed;
   width: 100%;
 }
 
@@ -202,8 +208,16 @@ table {
           box-sizing: border-box;
 }
 
+.tabla-contenido .tabla-contenido-fila:hover {
+  background-color: #e6e6e6;
+}
+
 .tabla-contenido .tabla-contenido-fila:nth-of-type(2n + 1) {
   background-color: #f5f5f5;
+}
+
+.tabla-contenido .tabla-contenido-fila:nth-of-type(2n + 1):hover {
+  background-color: gainsboro;
 }
 
 .tabla-contenido .tabla-contenido-celda {
@@ -213,7 +227,19 @@ table {
   vertical-align: middle;
 }
 
-.checkbox {
+.tabla-contenido th,
+.tabla-contenido td {
+  padding: 12px 15px;
+  vertical-align: middle;
+  white-space: break-spaces;
+  word-wrap: break-word;
+}
+
+.celda-checkbox {
+  width: 40px;
+}
+
+.celda-checkbox .checkbox {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -233,8 +259,7 @@ table {
 }
 
 .pencil:hover {
-  -webkit-box-shadow: 0 0 6px #ffc107;
-          box-shadow: 0 0 6px #ffc107;
+  color: #c99700;
   cursor: pointer;
 }
 
@@ -243,18 +268,17 @@ table {
 }
 
 .tacho:hover {
-  -webkit-box-shadow: 0 0 6px #f44336;
-          box-shadow: 0 0 6px #f44336;
+  color: #e11b0c;
   cursor: pointer;
 }
 
-#modal-alerta {
+.modal-alerta {
   color: #8a6d3b;
   font-size: 11.05px;
   padding-bottom: 27px;
 }
 
-#boton-eliminar {
+.modal-eliminar-boton {
   background-color: #d9534f;
   border: 1px solid transparent;
   border-color: #d43f3a;
@@ -271,12 +295,6 @@ table {
   vertical-align: middle;
 }
 
-#boton-eliminar:hover {
-  -webkit-box-shadow: inset 0 0 10px black;
-          box-shadow: inset 0 0 10px black;
-  cursor: pointer;
-}
-
 .modal-title {
   display: inline-block;
   font-size: 18px;
@@ -284,6 +302,7 @@ table {
 }
 
 .boton-cancel-x {
+  background-color: #ffffff;
   display: inline-block;
   font-size: 21px;
   line-height: 1;
@@ -315,7 +334,7 @@ table {
 .modal-wrapper {
   position: fixed;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
   left: 0;
   top: 0;
   height: 100%;
@@ -331,8 +350,8 @@ table {
   margin: auto;
   margin-top: 32px;
   color: #566787;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 15px #00000080;
+          box-shadow: 0 5px 15px #00000080;
 }
 
 .modal-body,
@@ -354,6 +373,12 @@ table {
   height: 27px;
   border: 1px solid #dddd;
   border-radius: 3px;
+}
+
+.modal-body .form-group input:focus,
+.modal-body .form-group textarea:focus {
+  background-color: #f5f5f5;
+  color: #566787;
 }
 
 .modal-body .form-group textarea {
@@ -378,26 +403,22 @@ table {
   padding: 7px 30px;
   font-size: 14px;
   margin-left: 10px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.modal-footer button:hover {
+  -webkit-box-shadow: inset 0 0 10px #00000080;
+          box-shadow: inset 0 0 10px #00000080;
+  cursor: pointer;
 }
 
 .modal-footer button.add {
   color: #ffffff;
 }
 
-.modal-footer button.add:hover {
-  -webkit-box-shadow: inset 0 0 10px black;
-          box-shadow: inset 0 0 10px black;
-  cursor: pointer;
-}
-
 .modal-footer button.boton-cancel {
   background: #ffffff;
-}
-
-.modal-footer button.boton-cancel:hover {
-  -webkit-box-shadow: inset 0 0 10px black;
-          box-shadow: inset 0 0 10px black;
-  cursor: pointer;
 }
 
 .modal-mensaje {

@@ -1,17 +1,16 @@
-#modal-alerta {
+.modal-alerta {
   color: $alerta;
   font-size: 11.05px;
   padding-bottom: 27px;
 }
 
-#boton-eliminar {
+.modal-eliminar-boton {
   background-color: $eliminar-bgk;
   border: 1px solid transparent;
   border-color: $eliminar-border;
   border-radius: 2px;
   box-sizing: border-box;
   color: $blanco;
-
   font-size: 14px;
   margin-top: -2px;
   min-width: 100px;
@@ -19,11 +18,6 @@
   text-shadow: 0 1px 0 $blanco;
   padding: 6px 12px;
   vertical-align: middle;
-
-  &:hover {
-    box-shadow: inset 0 0 10px black;
-    cursor: pointer;
-  }
 }
 
 .modal-title {
@@ -32,6 +26,7 @@
   padding: 25px 10px 21px 26px;
 }
 .boton-cancel-x {
+  background-color: $blanco;
   display: inline-block;
   font-size: 21px;
   line-height: 1;
@@ -56,7 +51,7 @@
 .modal-wrapper {
   position: fixed;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $modal-sombra;
   left: 0;
   top: 0;
   height: 100%;
@@ -69,7 +64,7 @@
   margin: auto;
   margin-top: 32px;
   color: #566787;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px $modal-sombra;
 }
 .modal-body,
 .modal-footer {
@@ -87,6 +82,11 @@
       height: 27px;
       border: 1px solid #dddd;
       border-radius: 3px;
+
+      &:focus {
+        background-color: $gris;
+        color: $azultxt;
+      }
     }
     textarea {
       height: 50px;
@@ -110,22 +110,19 @@
     padding: 7px 30px;
     font-size: 14px;
     margin-left: 10px;
+    transition-duration: 0.4s;
+
+    &:hover {
+      box-shadow: inset 0 0 10px $modal-sombra;
+      cursor: pointer;
+    }
 
     &.add {
       color: #ffffff;
-
-      &:hover {
-        box-shadow: inset 0 0 10px black;
-        cursor: pointer;
-      }
     }
+
     &.boton-cancel {
       background: #ffffff;
-
-      &:hover {
-        box-shadow: inset 0 0 10px black;
-        cursor: pointer;
-      }
     }
   }
 }
