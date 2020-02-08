@@ -65,6 +65,7 @@
   color: $amarillo;
 
   &:hover {
+    box-shadow: 0 0 6px $amarillo;
     cursor: pointer;
   }
 }
@@ -72,6 +73,7 @@
   color: $rojo;
 
   &:hover {
+    box-shadow: 0 0 6px $rojo;
     cursor: pointer;
   }
 }
