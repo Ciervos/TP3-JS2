@@ -76,7 +76,7 @@ const addNewEmployee = () => {
     const title = document.querySelector(".js-modal-title");
     title.innerHTML = "Add Employee";
 
-    const buttonAdd = document.querySelector("#todo-create");
+    const buttonAdd = document.querySelector(".js-todo-create");
     buttonAdd.innerHTML = "Add";
     buttonAdd.setAttribute("style", "background:#5cb85c");
 
@@ -93,7 +93,7 @@ addNewEmployee();
 /*fin de boton para activar modal add*/
 
 /*Boton de agregar un nuevo empleado  y de editar los datos del empleado*/
-const boton = document.querySelector("#todo-create");
+const boton = document.querySelector(".js-todo-create");
 boton.addEventListener("click", async () => {
   const fullname = document.querySelector("#name").value;
   const email = document.querySelector("#email").value;
@@ -132,7 +132,7 @@ botonCancel.forEach(boton => {
 const eliminarEmpleado = () => {
   modaleliminar.setAttribute("style", "display:block");
 };
-const botonEliminar = document.querySelector("#boton-eliminar");
+const botonEliminar = document.querySelector(".js-boton-eliminar");
 botonEliminar.addEventListener("click", () => {
   deleteTodo(window.deleteId, () => {
     showTodo();
@@ -147,7 +147,7 @@ const modalEditar = todo => {
   const title = document.querySelector(".js-modal-title");
   title.innerHTML = "Edit Employee";
 
-  const buttonSave = document.querySelector("#todo-create");
+  const buttonSave = document.querySelector(".js-todo-create");
   buttonSave.innerHTML = "Save";
   buttonSave.setAttribute("style", "background:#5bc0de");
   document.querySelector("#name").value = "";

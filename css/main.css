@@ -21,7 +21,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -41,7 +40,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -51,15 +50,9 @@ table {
 }
 
 .wrapper-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: 15px;
   background: #435d7d;
   color: #ffffff;
@@ -67,7 +60,6 @@ table {
   width: 80%;
   padding: 16px 27px;
 }
-
 .wrapper-menu .title {
   font-size: 24px;
 }
@@ -77,23 +69,15 @@ table {
   background-color: #5cb85c;
   border-color: #4cae4c;
   padding: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .wrapper-boton i {
   color: #ffffff;
   font-size: 21px;
   padding: 2px 6px;
 }
-
 .wrapper-boton:hover {
   background-color: #449d44;
   border-color: #398439;
@@ -113,34 +97,20 @@ table {
 
 /*Filtro*/
 .filtro-contenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
   height: 50px;
   width: 100%;
 }
-
 .filtro-contenedor .filtro-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
   margin-right: 15px;
   margin-left: 15px;
   height: 30px;
   width: 80%;
 }
-
 .filtro-contenedor .filtro-form .filtro-boton {
   background-color: #5cb85c;
   border-style: none;
@@ -148,21 +118,17 @@ table {
   cursor: pointer;
   font-family: "Varela Round", sans-serif;
 }
-
 .filtro-contenedor .filtro-form .filtro-boton:hover {
   background-color: #449d44;
 }
-
 .filtro-contenedor .filtro-input {
   border: 1px solid #ccc;
   border-radius: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-right: 10px;
   font-family: "Varela Round", sans-serif;
   width: 35%;
 }
-
 .filtro-contenedor .filtro-input:focus {
   background-color: #f5f5f5;
   color: #435d7d;
@@ -172,8 +138,7 @@ table {
   background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #566787;
   font-size: 13px;
   line-height: 1.5;
@@ -183,21 +148,17 @@ table {
 }
 
 .tabla-encabezado .tabla-encabezado-fila {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .tabla-encabezado .tabla-encabezado-fila:first-child {
   border-top: 0;
   width: 60px;
 }
-
 .tabla-encabezado .tabla-encabezado-fila .tabla-encabezado-celda {
   border-bottom: 2px solid #f5f5f5;
   border-color: #f5f5f5;
   border-top: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: bold;
   padding: 12px 15px;
   text-align: left;
@@ -205,29 +166,23 @@ table {
 }
 
 .tabla-contenido {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .tabla-contenido .tabla-contenido-fila:hover {
   background-color: #e6e6e6;
 }
-
 .tabla-contenido .tabla-contenido-fila:nth-of-type(2n + 1) {
   background-color: #f5f5f5;
 }
-
 .tabla-contenido .tabla-contenido-fila:nth-of-type(2n + 1):hover {
   background-color: gainsboro;
 }
-
 .tabla-contenido td {
   border-color: #f5f5f5;
   border-top: 1px solid #f5f5f5;
   padding: 12px 15px;
   vertical-align: middle;
 }
-
 .tabla-contenido th,
 .tabla-contenido td {
   padding: 12px 15px;
@@ -239,10 +194,8 @@ table {
 .celda-checkbox {
   width: 5%;
 }
-
 .celda-checkbox .checkbox {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -265,7 +218,6 @@ table {
 .content-icons {
   padding-left: 13px;
 }
-
 .content-icons i {
   padding: 6px;
   font-size: 16px;
@@ -274,7 +226,6 @@ table {
 .pencil {
   color: #ffc107;
 }
-
 .pencil:hover {
   color: #c99700;
   cursor: pointer;
@@ -283,7 +234,6 @@ table {
 .tacho {
   color: #f44336;
 }
-
 .tacho:hover {
   color: #e11b0c;
   cursor: pointer;
@@ -300,8 +250,7 @@ table {
   border: 1px solid transparent;
   border-color: #d43f3a;
   border-radius: 2px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #ffffff;
   font-size: 14px;
   margin-top: -2px;
@@ -324,7 +273,7 @@ table {
   font-size: 21px;
   line-height: 1;
   color: #474646;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   border: none;
   height: 23px;
@@ -332,20 +281,15 @@ table {
   width: 20px;
   padding: 23px 31px 17px 17px;
 }
-
 .boton-cancel-x:hover {
   cursor: pointer;
-  color: #000;
+  color: #00000080;
 }
 
 .modal-header {
   border-bottom: 1px solid #e5e5e5;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .modal-wrapper {
@@ -356,19 +300,16 @@ table {
   top: 0;
   height: 100%;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .modal-content-form {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 400px;
   margin: auto;
   margin-top: 32px;
   color: #566787;
-  -webkit-box-shadow: 0 5px 15px #00000080;
-          box-shadow: 0 5px 15px #00000080;
+  box-shadow: 0 5px 15px #00000080;
 }
 
 .modal-body,
@@ -379,11 +320,9 @@ table {
 .modal-body {
   padding: 10px 30px;
 }
-
 .modal-body .form-group {
   margin-bottom: 13px;
 }
-
 .modal-body .form-group input,
 .modal-body .form-group textarea {
   width: 100%;
@@ -391,17 +330,14 @@ table {
   border: 1px solid #dddd;
   border-radius: 3px;
 }
-
 .modal-body .form-group input:focus,
 .modal-body .form-group textarea:focus {
   background-color: #f5f5f5;
   color: #566787;
 }
-
 .modal-body .form-group textarea {
   height: 50px;
 }
-
 .modal-body .form-group label {
   display: block;
   font-size: 13px;
@@ -414,26 +350,20 @@ table {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
 .modal-footer button {
   border: 1px solid #ccc;
   padding: 7px 30px;
   font-size: 14px;
   margin-left: 10px;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
-
 .modal-footer button:hover {
-  -webkit-box-shadow: inset 0 0 10px #00000080;
-          box-shadow: inset 0 0 10px #00000080;
+  box-shadow: inset 0 0 10px #00000080;
   cursor: pointer;
 }
-
 .modal-footer button.add {
   color: #ffffff;
 }
-
 .modal-footer button.boton-cancel {
   background: #ffffff;
 }
@@ -451,10 +381,10 @@ body {
 .contenedor-principal {
   background-color: #ffffff;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 20px 27px;
   width: 80%;
   margin-left: 107px;
 }
+
 /*# sourceMappingURL=main.css.map */

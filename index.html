@@ -56,12 +56,12 @@
 <!-- Fin Lista -->
 <!-- Modales -->
 <!-- Modal add && edit -->
-<div class="modal-wrapper js-modal-wrapper">
+<section class="modal-wrapper js-modal-wrapper">
   <div class="modal-content-form">
     <form action="#">
       <div class="modal-header">
         <h2 class="modal-title js-modal-title">Add Employee</h2>
-        <button class="js-boton-cancel boton-cancel-x">x</button>
+        <button class="boton-cancel-x js-boton-cancel">x</button>
       </div>
       <div class="modal-body">
       <div class="form-group">
@@ -83,16 +83,16 @@
       </div>
       <div class="modal-footer">
         <button class="boton-cancel js-boton-cancel" type="button">Cancel</button>
-        <button class="add" id="todo-create"type="button">Add</button>
+        <button class="add js-todo-create"type="button">Add</button>
       </div>
       <input type="hidden" id="id-edit">
     </form>
   </div>
-</div>
+</section>
 <!-- Fin del modal add && edit-->
 
 <!-- Modal Eliminar -->
-<div class="modal-wrapper js-modal-eliminar">
+<section class="modal-wrapper js-modal-eliminar">
   <div class="modal-content-form">
       <form action="#">
         <div class="modal-header">
@@ -101,15 +101,15 @@
         </div>
         <div class="modal-body">
           <p class="modal-mensaje">Are you sure you want to delete these Records?</p>
-          <p id="modal-alerta" class="modal-alerta">This action cannot be undone</p>
+          <p class="modal-alerta">This action cannot be undone</p>
         </div>
         <div class="modal-footer">
           <button class="boton-cancel js-boton-cancel" type="button">Cancel</button>
-          <button id="boton-eliminar" class="modal-eliminar-boton"  type="button">Delete</button>
+          <button class="modal-eliminar-boton js-boton-eliminar"  type="button">Delete</button>
       </form>
     </div>
   </div>
-</div>
+</section>
 <!-- Fin modal Eliminar -->
 <!-- Fin modales -->
 

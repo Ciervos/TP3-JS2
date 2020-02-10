@@ -38,7 +38,6 @@ const getLista = async () => {
         .catch(handleError);
 };
 
-
 const getBuscar = async q => {
     await axios.get(`${baseUrl}/?search=${q}`)
         .then(res => {
@@ -62,26 +61,21 @@ const validarCampos = (fullname, email, address, phone) =>{
     if(fullname.length==0 || fullname.length>=50){
       
         alert("Nombre ingresado no válido. Máx: 50 cáracteres");
-       
         throw "Error en nombre ingresado"
     }else if(address.length<=0 || address.length>=60){
         alert("Dirección ingresado no válido. Máx: 60 cáracteres");
         throw "Error en dirección ingresado" 
     }
 
-    if(email.match(formatoMail)){
-        
-    }else{
-        alert("Mail inválido");
-        throw "Error en mail ingresado";
+    if(!email.match(formatoMail)){
+      alert("Mail inválido");
+      throw "Error en mail ingresado";
     }
 
-    if(phone.match(formatoTel)){
-
-    }else{
-        alert("Tel inválido, Formato esperado: XXXX-XXXX");
-        throw "Error en telefono ingresado. Formato esperado: XXXX-XXXX"     
-    } 
+    if(!phone.match(formatoTel)){
+      alert("Tel inválido, Formato esperado: XXXX-XXXX");
+      throw "Error en telefono ingresado. Formato esperado: XXXX-XXXX"     
+    }
 } 
 
 /*Funciones C eliminar*/
