@@ -174,6 +174,8 @@ const modalEditar = todo => {
 /* Filtro y busqueda */
 
 const filtrar = () => {
+  // El boton es un submit, asique falta un event.preventDefault para que no
+  // recargue la pagina
   let q = document.querySelector("#input-filtro").value;
   getBuscar(q);
 };
